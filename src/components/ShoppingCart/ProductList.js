@@ -44,12 +44,13 @@ export default class ProductList extends Component {
   renderProduct = () => {
     return this.arrProducts.map((product, index)=> {
         return(
-            <div className="col-4" key={index}>
-                <ProductItem productProps = {product}/>
+            <div className="col-4 mt-3" key={index}>
+                <ProductItem productProps = {product} addingToCart = {this.props.addingToCart}/>
             </div>
         );
     });
   }
+
   render() {
     return (
       <div className="container">
